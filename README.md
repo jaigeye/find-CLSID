@@ -10,7 +10,7 @@ This was created entirely to circumvent my laziness. If you are also lazy, check
 ![](Images/example.png)
 
 # Add as a Module
-- First, define the correct directory by checking the local environment variables:
+First, define the correct directory by checking the local environment variables:
 `$env:PSModulePath -split ';'`
 ![](Images/paths.png)
 
@@ -26,4 +26,4 @@ If errors return for execution policy issues, run `Get-ExecutionPolicy -List`:
 
 Reference [Microsoft docs](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2) for a policy setting that works for you. Otherwise, run through the above steps with `powershell.exe -executionpolicy bypass -file <file>` so the bypass is per command so global settings remain untouched. As the cmdlet is not signed, it cannot execute under `undefined` or `restricted` policies.
 
-> * Don't quote me on that, I may be wrong
+> *Don't quote me on that, I may be wrong
