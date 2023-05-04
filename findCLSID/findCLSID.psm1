@@ -20,12 +20,12 @@
    Show-Calendar -HighlightDay (1..10 + 22) -HighlightDate "2008-12-25"
 #>
 
+function Find-CLSID {
 param (
     [ValidateNotNullOrEmpty()]
     [string]$CLSID = $(Read-Host "Input CLSID string")
 )
 
-function Find-CLSID {
 # this is ugly and painful but it makes an exact match so fuck it we ball
   $input_regex = "^\{([0-9a-fA-F]){8}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){12}\}$"
 
