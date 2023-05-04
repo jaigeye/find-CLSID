@@ -1,11 +1,11 @@
-# whoseCLSID
+# Find-CLSID
 
 A simple script intended to receive a CLSID input and output the correlated process name according to the local registry.
 
 This was created entirely to circumvent my laziness. If you are also lazy, check `Add as a Module`, `.psm1` file is also included.
 
 # Usage
-`powershell.exe -noprofile -executionpolicy bypass -file .\whoseCLSID.ps1`
+`powershell.exe -noprofile -executionpolicy bypass -file .\Find-CLSID.ps1`
 
 ![](Images/example.png)
 
@@ -16,7 +16,7 @@ First, define the correct directory by checking the local environment variables:
 
 In my case, I chose my local user's modules directory but putting it in `system32\WindowsPowerShell\` should make it available to all users*.
 
-Move the directory `whoseCLSID` with its single `whoseCLSID.psm1` file to the chosen directory. After moving it, run `Import-Module whoseCLSID -verbose`. If no errors return, run `Find-CLSID` in a stand-alone window:
+Move the directory `findCLSID` with its single `findCLSID.psm1` file to the chosen directory. After moving it, run `Import-Module findCLSID -verbose`. If no errors return, run `Find-CLSID` in a stand-alone window:
 
 ![](Images/success.png)
 
