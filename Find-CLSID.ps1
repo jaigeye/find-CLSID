@@ -15,11 +15,12 @@ The only flag required: a CLSID string, which has the format of 8,4,4,4,12 hexad
 
 #>
 
+# this is ugly and painful but it makes an exact match so fuck it we ball
 param (
     [ValidateNotNullOrEmpty()]
     [string]$CLSID = $(Read-Host "Input CLSID string")
 )
-# this is ugly and painful but it makes an exact match so fuck it we ball
+
 $input_regex = "^\{([0-9a-fA-F]){8}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){12}\}$"
 
 # paths the CLSID may be in  
